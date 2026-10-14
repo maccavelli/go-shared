@@ -1,0 +1,12 @@
+# Python (scripts/check_records.py)
+__pycache__/
+*.py[cod]
+
+# Scratch and tool output
+coverage_*.out
+*.log
+*.tmp
+tmp/
+temp/
+.cache/
+.worktrees/
