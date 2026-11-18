@@ -172,3 +172,13 @@ Plants, each on a scratch copy of the tree and removed afterwards:
 
 Not done, deliberately: no commit and no push. The owner commits with `git commit --no-edit`, and
 pushes.
+
+**Deviation — 2026-10-13, after execution: committed together with 0002 P1.**
+
+* The owner committed and pushed one commit, `d62e2a2`. It holds this scaffold and
+  [0002-PLAN-shared-library-compatibility-check.md](0002-PLAN-shared-library-compatibility-check.md)'s
+  P1 (`scripts/check_libs.py`, and its documentation changes).
+* "After P2" above planned two commits, so that the scaffold commit would carry no source. The
+  pushed history does not meet that rule.
+* It is not rewritten, because the commit is published. The content of both phases is as verified
+  in their execution records. The details are in 0002-PLAN's deviation "the commit".

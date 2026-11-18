@@ -8,8 +8,10 @@ associated-madr: "0002-MADR-shared-library-compatibility-check.md"
 
 Associated MADR: [0002-MADR-shared-library-compatibility-check.md](0002-MADR-shared-library-compatibility-check.md)
 
-**Not approved for execution.** P1 starts on the owner's "proceed" or "do 0002 P1", and only after
-the owner has committed the 0001 scaffold, so the scaffold commit carries no source.
+~~**Not approved for execution.** P1 starts on the owner's "proceed" or "do 0002 P1", and only after
+the owner has committed the 0001 scaffold, so the scaffold commit carries no source.~~ Approved on
+2026-10-13. The scaffold and P1 were committed together; see the deviation "the commit" in the
+execution record.
 
 ## Goal
 
@@ -157,3 +159,20 @@ Real runs (network, no provider quota):
   (see the deviation), and its tree was unchanged.
 * **Identifiers.** A scan of the working tree's 23 files found no account name, hostname, home path
   or e-mail domain. A planted identifier was found.
+
+**Deviation — 2026-10-13, the commit: the scaffold and P1 share one commit.**
+
+* The owner committed and pushed the repository as a single commit, `d62e2a2` ("feat(scaffold):
+  initialize shared Go tooling workspace"). It holds all 21 files: the 0001 scaffold and this
+  phase's `scripts/check_libs.py`, with the `AGENTS.md`, `docs/README.md`, `docs/architecture.md`
+  and 0002-record changes.
+* The deviation "step 6: not staged" above described two commits, the scaffold first. That did not
+  happen. Its text is kept as what was planned.
+* Effect:
+  * the bootstrap exception's rule that a scaffold commit carries no source is not met by
+    `d62e2a2`;
+  * the commit's subject names only the scaffold.
+* The content is exactly what was verified above. Nothing was changed after verification.
+* Resolution, the owner's choice: history is not rewritten, because the commit is pushed. This
+  note records the fact. A future commit that touches `scripts/check_libs.py` is a separate
+  commit from any workspace change.
