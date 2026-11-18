@@ -13,6 +13,7 @@ Documentation, decisions and the full index: [docs/README.md](docs/README.md).
 | understand how this fits together | [docs/architecture.md](docs/architecture.md) |
 | know the rules agents follow in this repository | [AGENTS.md](AGENTS.md) |
 | check my repository against the latest library tags | [0002-MADR-shared-library-compatibility-check.md](docs/decisions/0002-MADR-shared-library-compatibility-check.md) |
+| know why the home-path disclosure check lives here | [0003-MADR-house-disclosure-check.md](docs/decisions/0003-MADR-house-disclosure-check.md) |
 
 ## Licence
 

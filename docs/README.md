@@ -19,6 +19,8 @@ This tree holds three kinds of document:
 | 0001 | PLAN | [Implement creating `go-shared` and scaffolding it to the fleet workspace standard](decisions/0001-PLAN-scaffold-go-shared-workspace.md) | complete |
 | 0002 | MADR | [Ship one library-compatibility check, `scripts/check_libs.py`, that any Go repository runs against its own libraries](decisions/0002-MADR-shared-library-compatibility-check.md) | accepted |
 | 0002 | PLAN | [Implement the shared library-compatibility check](decisions/0002-PLAN-shared-library-compatibility-check.md) | complete |
+| 0003 | MADR | [House the home-path disclosure check in go-shared](decisions/0003-MADR-house-disclosure-check.md) | accepted |
+| 0003 | PLAN | [Implement the shared home-path disclosure check](decisions/0003-PLAN-house-disclosure-check.md) | complete |
 
 ## I want to…
 
@@ -28,3 +30,4 @@ This tree holds three kinds of document:
 | know the rules agents follow in this repository | [AGENTS.md](../AGENTS.md) |
 | know why the repository has the files and gates it has | [0001-MADR-scaffold-go-shared-workspace.md](decisions/0001-MADR-scaffold-go-shared-workspace.md) |
 | check my repository against the latest library tags | [0002-MADR-shared-library-compatibility-check.md](decisions/0002-MADR-shared-library-compatibility-check.md) |
+| know why the home-path disclosure check lives here | [0003-MADR-house-disclosure-check.md](decisions/0003-MADR-house-disclosure-check.md) |

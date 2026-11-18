@@ -21,6 +21,7 @@ LICENSE                   Apache License 2.0
 .gitattributes            LF on every platform
 scripts/check_records.py  record numbering and link check
 scripts/check_libs.py     library-compatibility check, run against a consuming repository
+scripts/check_disclosure.py home-path disclosure check, run against a consuming repository
 docs/
   README.md               ToC and the "I want to…" matrix
   architecture.md         this file
@@ -46,6 +47,24 @@ configured packages, apidiff from the pinned version, govulncheck, and the libra
 security advisories. It needs the network. `--self-test` runs offline. Exit 0 is all checks
 passing, 1 is a failing check, and 2 is a usage or config error. Why it is built this way:
 [0002-MADR-shared-library-compatibility-check.md](decisions/0002-MADR-shared-library-compatibility-check.md).
+
+### `scripts/check_disclosure.py`
+
+Scans a repository's tracked files for a real user-home path — macOS, Linux, or Windows,
+Windows in either separator and either case — with a concrete account segment, and prints
+only file, line and category. A placeholder account (`<user>`, `~`, `$HOME`,
+`%USERPROFILE%`) passes, and so does a line that demonstrates redaction with a full `<…>`
+token, on itself or the adjacent line. A file with a NUL byte is binary and skipped; a
+tracked file that cannot be read is a tool error. From the consuming repository's root:
+
+```bash
+python3 ../go-shared/scripts/check_disclosure.py --repo .
+```
+
+It needs no network; `--self-test` runs the rules offline and needs no git. Exit 0 is no
+finding, 1 is a finding, and 2 is a tool error: an unreadable tracked file, a `--repo` that
+is not a directory, or a git failure. Why it is built this way:
+[0003-MADR-house-disclosure-check.md](decisions/0003-MADR-house-disclosure-check.md).
 
 ## What is not here
 

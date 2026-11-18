@@ -109,6 +109,7 @@ docs/reports/NNNN-GATES-short-slug.md
 - Before staging, run the repository's pre-add command if one exists.
 - Before every commit, run `make check-records` and `make markdownlint` when those targets exist; otherwise `python3 scripts/check_records.py --check-all` and `npx --yes markdownlint-cli2@0.23.2`.
 - Before every commit that touches `scripts/check_libs.py`, run `python3 scripts/check_libs.py --self-test` (offline; 0002-MADR D8).
+- Before every commit that touches `scripts/check_disclosure.py`, run `python3 scripts/check_disclosure.py --self-test` (offline; 0003-MADR D4).
 - A file that fails is not committed.
 
 ## Identifiers
